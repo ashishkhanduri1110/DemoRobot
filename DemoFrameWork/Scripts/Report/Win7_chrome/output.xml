@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170527 14:32:34.140" generator="Robot 3.0.2 (Python 2.7.2 on win32)">
+<suite id="s1" name="Demo &amp; Demo2">
+<suite source="F:\Self_Learn\Robot_Framework\DemoFrameWork\Scripts\Demo.robot" id="s1-s1" name="Demo">
+<test id="s1-s1-t1" name="TestTag1">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Working n</arg>
+</arguments>
+<status status="PASS" endtime="20170527 14:32:34.717" starttime="20170527 14:32:34.717"></status>
+</kw>
+<status status="PASS" endtime="20170527 14:32:34.717" critical="yes" starttime="20170527 14:32:34.717"></status>
+</test>
+<status status="PASS" endtime="20170527 14:32:34.717" starttime="20170527 14:32:34.171"></status>
+</suite>
+<suite source="F:\Self_Learn\Robot_Framework\DemoFrameWork\Scripts\Demo2.robot" id="s1-s2" name="Demo2">
+<test id="s1-s2-t1" name="TestTag3">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>www</arg>
+</arguments>
+<status status="PASS" endtime="20170527 14:32:34.732" starttime="20170527 14:32:34.717"></status>
+</kw>
+<status status="PASS" endtime="20170527 14:32:34.732" critical="yes" starttime="20170527 14:32:34.717"></status>
+</test>
+<status status="PASS" endtime="20170527 14:32:34.732" starttime="20170527 14:32:34.717"></status>
+</suite>
+<status status="PASS" endtime="20170527 14:32:34.732" starttime="20170527 14:32:34.140"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo &amp; Demo2" pass="2">Demo &amp; Demo2</stat>
+<stat fail="0" id="s1-s1" name="Demo" pass="1">Demo &amp; Demo2.Demo</stat>
+<stat fail="0" id="s1-s2" name="Demo2" pass="1">Demo &amp; Demo2.Demo2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

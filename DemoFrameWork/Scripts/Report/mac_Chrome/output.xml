@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170526 08:52:30.937" generator="Robot 3.0.2 (Python 2.7.2 on win32)">
+<suite source="F:\Self_Learn\Robot_Framework\DemoFrameWork\Scripts\Demo.robot" id="s1" name="Demo">
+<test id="s1-t1" name="demo">
+<kw name="Open Browser and launch application" library="POC_Keywords">
+<kw name="Get value by row col" library="ExcelKeyWords">
+<arguments>
+<arg>POCSheet</arg>
+<arg>1</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${URL}</var>
+</assign>
+<kw name="Get Excel Path" library="ExcelKeyWords">
+<assign>
+<var>${path}</var>
+</assign>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>F:\\Self_Learn\\Robot_Framework\\DemoFrameWork\\KeyWords</arg>
+<arg>\\KeyWords</arg>
+</arguments>
+<assign>
+<var>${Demo1}</var>
+</assign>
+<msg timestamp="20170526 08:52:40.417" level="INFO">${Demo1} = F:\Self_Learn\Robot_Framework\DemoFrameWork</msg>
+<status status="PASS" endtime="20170526 08:52:40.417" starttime="20170526 08:52:40.416"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Demo1}\\excel</arg>
+</arguments>
+<assign>
+<var>${Demo1}</var>
+</assign>
+<msg timestamp="20170526 08:52:40.418" level="INFO">${Demo1} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel</msg>
+<status status="PASS" endtime="20170526 08:52:40.418" starttime="20170526 08:52:40.417"></status>
+</kw>
+<msg timestamp="20170526 08:52:40.419" level="INFO">${path} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel</msg>
+<status status="PASS" endtime="20170526 08:52:40.419" starttime="20170526 08:52:40.415"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${path}\\POC_Excel.xls</arg>
+</arguments>
+<assign>
+<var>${filename}</var>
+</assign>
+<msg timestamp="20170526 08:52:40.421" level="INFO">${filename} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel\POC_Excel.xls</msg>
+<status status="PASS" endtime="20170526 08:52:40.421" starttime="20170526 08:52:40.420"></status>
+</kw>
+<kw name="Open Excel" library="ExcelLibrary">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" endtime="20170526 08:52:40.665" starttime="20170526 08:52:40.421"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${rownu}</arg>
+<arg>${colnu}</arg>
+</arguments>
+<assign>
+<var>${cellData}</var>
+</assign>
+<msg timestamp="20170526 08:52:40.667" level="INFO">${cellData} = https://accounts.google.com/signin</msg>
+<status status="PASS" endtime="20170526 08:52:40.667" starttime="20170526 08:52:40.665"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${cellData}</arg>
+</arguments>
+<msg timestamp="20170526 08:52:40.668" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170526 08:52:40.669" starttime="20170526 08:52:40.668"></status>
+</kw>
+<msg timestamp="20170526 08:52:40.669" level="INFO">${URL} = https://accounts.google.com/signin</msg>
+<status status="PASS" endtime="20170526 08:52:40.669" starttime="20170526 08:52:40.414"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>firefox</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+</arguments>
+<msg timestamp="20170526 08:52:40.671" level="INFO">Opening browser 'firefox' to base url 'https://accounts.google.com/signin' through remote server at 'http://naveda:2312453d-fa1b-4486-8e9b-56c6c7df4761@ondemand.saucelabs.com:80/wd/hub'</msg>
+<status status="PASS" endtime="20170526 08:52:54.785" starttime="20170526 08:52:40.670"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170526 08:52:55.362" starttime="20170526 08:52:54.786"></status>
+</kw>
+<status status="PASS" endtime="20170526 08:52:55.362" starttime="20170526 08:52:40.413"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Sign in - Google Accounts</arg>
+</arguments>
+<msg timestamp="20170526 08:52:55.945" level="INFO">Page title is 'Sign in - Google Accounts'.</msg>
+<status status="PASS" endtime="20170526 08:52:55.945" starttime="20170526 08:52:55.364"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>with your Google Account</arg>
+</arguments>
+<msg timestamp="20170526 08:52:57.196" level="INFO">Current page contains text 'with your Google Account'.</msg>
+<status status="PASS" endtime="20170526 08:52:57.197" starttime="20170526 08:52:55.950"></status>
+</kw>
+<kw name="Get value by row col" library="ExcelKeyWords">
+<arguments>
+<arg>POCSheet</arg>
+<arg>1</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<kw name="Get Excel Path" library="ExcelKeyWords">
+<assign>
+<var>${path}</var>
+</assign>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>F:\\Self_Learn\\Robot_Framework\\DemoFrameWork\\KeyWords</arg>
+<arg>\\KeyWords</arg>
+</arguments>
+<assign>
+<var>${Demo1}</var>
+</assign>
+<msg timestamp="20170526 08:52:57.205" level="INFO">${Demo1} = F:\Self_Learn\Robot_Framework\DemoFrameWork</msg>
+<status status="PASS" endtime="20170526 08:52:57.205" starttime="20170526 08:52:57.204"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Demo1}\\excel</arg>
+</arguments>
+<assign>
+<var>${Demo1}</var>
+</assign>
+<msg timestamp="20170526 08:52:57.207" level="INFO">${Demo1} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel</msg>
+<status status="PASS" endtime="20170526 08:52:57.207" starttime="20170526 08:52:57.206"></status>
+</kw>
+<msg timestamp="20170526 08:52:57.208" level="INFO">${path} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel</msg>
+<status status="PASS" endtime="20170526 08:52:57.208" starttime="20170526 08:52:57.203"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${path}\\POC_Excel.xls</arg>
+</arguments>
+<assign>
+<var>${filename}</var>
+</assign>
+<msg timestamp="20170526 08:52:57.210" level="INFO">${filename} = F:\Self_Learn\Robot_Framework\DemoFrameWork\excel\POC_Excel.xls</msg>
+<status status="PASS" endtime="20170526 08:52:57.210" starttime="20170526 08:52:57.209"></status>
+</kw>
+<kw name="Open Excel" library="ExcelLibrary">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<status status="PASS" endtime="20170526 08:52:57.231" starttime="20170526 08:52:57.210"></status>
+</kw>
+<kw name="Read Cell Data By Coordinates" library="ExcelLibrary">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${SheetName}</arg>
+<arg>${rownu}</arg>
+<arg>${colnu}</arg>
+</arguments>
+<assign>
+<var>${cellData}</var>
+</assign>
+<msg timestamp="20170526 08:52:57.235" level="INFO">${cellData} = test@gmail.com</msg>
+<status status="PASS" endtime="20170526 08:52:57.235" starttime="20170526 08:52:57.232"></status>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<doc>Returns from the enclosing user keyword.</doc>
+<arguments>
+<arg>${cellData}</arg>
+</arguments>
+<msg timestamp="20170526 08:52:57.236" level="INFO">Returning from the enclosing user keyword.</msg>
+<status status="PASS" endtime="20170526 08:52:57.237" starttime="20170526 08:52:57.236"></status>
+</kw>
+<msg timestamp="20170526 08:52:57.238" level="INFO">${text} = test@gmail.com</msg>
+<status status="PASS" endtime="20170526 08:52:57.238" starttime="20170526 08:52:57.201"></status>
+</kw>
+<kw name="enter text in field" library="POC_Keywords">
+<arguments>
+<arg>xpath=//*[@id='identifierId']</arg>
+<arg>${text}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20170526 08:52:57.242" level="INFO">Typing text 'test@gmail.com' into text field 'xpath=//*[@id='identifierId']'</msg>
+<status status="PASS" endtime="20170526 08:52:59.582" starttime="20170526 08:52:57.241"></status>
+</kw>
+<status status="PASS" endtime="20170526 08:52:59.583" starttime="20170526 08:52:57.239"></status>
+</kw>
+<kw name="Click" library="POC_Keywords">
+<arguments>
+<arg>xpath=//span[text()='Next']</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20170526 08:52:59.585" level="INFO">Clicking element 'xpath=//span[text()='Next']'.</msg>
+<status status="PASS" endtime="20170526 08:53:01.078" starttime="20170526 08:52:59.585"></status>
+</kw>
+<status status="PASS" endtime="20170526 08:53:01.079" starttime="20170526 08:52:59.584"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>${LOGIN_FAIL_MSG}</arg>
+</arguments>
+<msg timestamp="20170526 08:53:02.279" level="INFO">Current page contains text 'Couldn't find your Google Account'.</msg>
+<status status="PASS" endtime="20170526 08:53:02.280" starttime="20170526 08:53:01.079"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20170526 08:53:12.281" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20170526 08:53:12.281" starttime="20170526 08:53:02.280"></status>
+</kw>
+<kw name="Browser Close" library="POC_Keywords">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170526 08:53:13.015" starttime="20170526 08:53:12.283"></status>
+</kw>
+<status status="PASS" endtime="20170526 08:53:13.016" starttime="20170526 08:53:12.282"></status>
+</kw>
+<status status="PASS" endtime="20170526 08:53:13.017" critical="yes" starttime="20170526 08:52:40.411"></status>
+</test>
+<status status="PASS" endtime="20170526 08:53:13.020" starttime="20170526 08:52:30.941"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo" pass="1">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
